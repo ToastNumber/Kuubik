@@ -1,0 +1,129 @@
+Introduction -------------------------------------------------------------
+SCRAMBLE:
+N
+DESCRIPTION:
+In this tutorial you will learn how to solve the permutation of the last layer, or PLL, of a Rubik's cube. This is the final step of solving the Rubik's cube. You solve the permutation after solving the orientation of the last layer. Solving PLL involves two steps: 
+	1. Solving corner permutation
+	2. Solving edge permutation
+*
+How to solve corners with headlights. ENABLE------------------------------------------- 
+SCRAMBLE:
+z2 R U R' U' R' F R2 U' R' U' R U R' F' U'
+DESCRIPTION:
+There are two types of corner cases you need to recognise. The first type is where there are 'headlights'. Headlights are two adjacent corners that have the same sticker on the same face. For example, look at the cube on the screen and you can see the two red corner stickers on the green face - these are known as headlights. 
+If you find headlights, then move them to the back of the cube and perform the following algorithm:
+	L' U R' D2 R U' R' D2 R L
+	
+For example, to solve the cube on the screen, we place the red headlights to the back by performing y2, then perform L' U R' D2 R U' R' D2 R L.
+
+Try solving the cube with the moves provided.	
+EXPECTED FINAL STATE:
+cross
+corners
+edges
+oll
+corner permutation
+HINT:
+Perform y2 L' U R' D2 R U' R' D2 R L ('a a e j k l l i f k l l i d' on your keyboard)
+OPTIMAL SOLUTION:
+y2 L' U R' D2 R U' R' D2 R L
+EXPLANATION:
+N/A
+*
+How to solve corners without headlights. ENABLE----------------------------------- 
+SCRAMBLE:
+z2 R' U L' U2 R U' L R' U L' U2 R U' L U2
+DESCRIPTION:
+The second corner case is where there are no headlights. If you cannot find any headlights, then perform the following algorithm:
+	x' R U' R' D R U R' D' R U R' D R U' R' D' x
+	
+Try solving the cube with the moves provided.	
+EXPECTED FINAL STATE:
+cross
+corners
+edges
+oll
+corner permutation
+HINT:
+Perform x' R U' R' D R U R' D' R U R' D R U' R' D' x ('n i f k s i j k l i j k s i f k l y' on your keyboard)
+OPTIMAL SOLUTION:
+x' R U' R' D R U R' D' R U R' D R U' R' D' x
+EXPLANATION:
+If there are no headlights, you can perform this algorithm from any side.
+*
+How to solve edges with a block. ENABLE----------------------------------- 
+SCRAMBLE:
+z2 R U' R U R U R U' R' U' R2 U2
+DESCRIPTION:
+There are two PLL edge cases which you need to recognise. The first is where there is a solid block on one of the faces. For example, the cube on the screen has a solid block, i.e. 3 adjacent matching stickers, of blue. Move this block to the back of the cube then perform the following algorithm repeatedly until the cube is solved.
+	R U' R U R U R U' R' U' R2
+
+To solve the cube on the screen, you can perform U2 to move the block to the back, then perform R U' R U R U R U' R' U' R2 twice so that the cube is solved.
+
+Try solving the cube using the moves provided.
+EXPECTED FINAL STATE:
+cross
+corners
+edges
+oll
+pll
+HINT:
+Perform U2 (R U' R U R U R U' R' U' R2) x2 ('j j i f i j i j i f k f i i i f i j i j i f k f i i' on your keyboard)
+OPTIMAL SOLUTION:
+U2 R U' R U R U R U' R' U' R2 R U' R U R U R U' R' U' R2
+EXPLANATION:
+If there are no headlights, you can perform this algorithm from any side.
+*
+How to solve edges without a block. ENABLE----------------------------------- 
+SCRAMBLE:
+z2 M2 U M2 U M' U2 M2 U2 M' U
+DESCRIPTION:
+The second edge case is where there is no solid block on one of the faces. In order to solve this, you first perform R U' R U R U R U' R' U' R2 on any side, then there will be a block on one of the sides and you can continue from the previous step.
+
+To solve the cube on the screen, you can perform R U' R U R U R U' R' U' R2 to create a solid block on one of the sides and then solve the cube from there.
+
+Try solving the cube using this method.
+EXPECTED FINAL STATE:
+cross
+corners
+edges
+oll
+pll
+HINT:
+Perform R U' R U R U R U' R' U' R2 ('i f i j i j i f k f i i' on your keyboard) to create a solid block.
+After creating the solid red block, perform U2 to move it to the back then solve the edge.
+After moving the solid block to the back, perform R U' R U R U R U' R' U' R2) x2 ('j j i f i j i j i f k f i i i f i j i j i f k f i i' on your keyboard)
+OPTIMAL SOLUTION:
+R U' R U R U R U' R' U' R2 U2 R U' R U R U R U' R' U' R2 R U' R U R U R U' R' U' R2 U'
+EXPLANATION:
+N/A
+*
+Test. ENABLE----------------------------------- 
+SCRAMBLE:
+z2 B2 F2 R2 D R2 B2 U F2 D' L2 D B' U' R' U R B U2 L2 F' L' U' L U F
+DESCRIPTION:
+Try solving the cube on your own.
+EXPECTED FINAL STATE:
+cross
+corners
+edges
+oll
+pll
+HINT:
+There are blue headlights on the left.
+Move the headlights to the back of the cube.
+Solve corners using L' U R' D2 R U' R' D2 R L.
+After solving corners, there is a solid blue block.
+Move the solid blue block to the back.
+Solve edges by performing (R U' R U R U R U' R' U' R2) x 2
+OPTIMAL SOLUTION:
+U L' U R' D2 R U' R' D2 R L U' R U' R U R U R U' R' U' R2 R U' R U R U R U' R' U' R2
+EXPLANATION:
+There were blue headlights on the left face, so you can bring these to the back of the cube by performing either y or U. You then solve the corners by performing L' U R' D2 R U' R' D2 R L. After solving the corners, there is a solid blue block. Move this block to the back of the cube, then performing the edge-solving algorithm (R U' R U R U R U' R' U' R2) x 2
+*
+CONCLUSION -------------------------------------------------------------
+SCRAMBLE:
+N
+DESCRIPTION:
+Congratulations! You now know how to solve the Rubik's cube! Use your wisdom wisely.
+*

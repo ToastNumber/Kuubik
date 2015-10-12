@@ -1,0 +1,80 @@
+//Introduction
+SCRAMBLE:
+N
+DESCRIPTION:
+Welcome to the first/second/third cross tutorial
+*
+//White-Red Edge - ENABLE
+SCRAMBLE:
+B2 F' U B' F L' R U' B2 F L R2 D' U2 L2 B R2 D U' F2 D L2 R2 U R
+DESCRIPTION:
+Find the White-Red edge and try to solve it in two moves.(Rotations are not counted as moves).
+EXPECTED FINAL STATE:
+w-r
+HINT:
+Look for a way to insert the edge into the top layer with white facing top, then try to solve it by doing a U move.
+OPTIMAL SOLUTION:
+B U
+y R U
+y' L U
+y2 F U
+EXPLANATION:
+You can insert the White-Red edge into the U face (with White facing upwards) by performing B.
+Now that it is in the U face, you can solve it by performing U.
+*
+//White-Green edge - ENABLE
+SCRAMBLE:
+B2 F' U B' F L' R U' B2 F L R2 D' U2 L2 B R2 D U' F2 D L2 R2 U R B U y
+DESCRIPTION:
+Find the White-Green edge and try to solve it in three moves. (Rotations are not counted as moves).
+EXPECTED FINAL STATE:
+w-r
+w-g
+HINT:
+The White-Red edge is already solved, so make sure to solve the White-Green edge RELATIVE to the White-Red edge.
+Move the White-Red edge to a position that will allow you to insert the White-Green edge correctly.
+You could move the White-Green edge into the bottom layer and then move it under its destination and insert it correctly.
+OPTIMAL SOLUTION:
+U2 R U2
+F2 L' F2
+R' D2 L2
+EXPLANATION:
+The White-Green edge needs to go to the position that is clockwise from the White-Red edge.
+We can insert the White-Green edge into the U face (with White facing upwards) by performing R, but first we need to move its destination by performing U2.
+So, move the destination by performing U2, insert the edge by performing R, then move the destination back by undoing U2.
+*
+//White-Orange edge - ENABLE
+SCRAMBLE:
+B2 F' U B' F L' R U' B2 F L R2 D' U2 L2 B R2 D U' F2 D L2 R2 U R B U y U2 R U2
+DESCRIPTION:
+Find the White-Orange edge and try to solve it in two moves. (Rotations are not counted as moves).
+EXPECTED FINAL STATE:
+w-r
+w-g
+w-o
+HINT:
+The White-Orange edge is not oriented correctly (it does not have White on top), so fix its orientation.
+You can move the White-Orange edge into the middle layer and then insert it.
+OPTIMAL SOLUTION:
+R B
+y F R
+y2 L F
+EXPLANATION:
+The White-Orange edge is not oriented correctly, so you have to get it out of the top layer by performing R.
+After you perform R, the edge can be inserted normally with the move B.
+*
+//White-Blue edge - ENABLE
+SCRAMBLE:
+B2 F' U B' F L' R U' B2 F L R2 D' U2 L2 B R2 D U' F2 D L2 R2 U R B U y U2 R U2 R B
+DESCRIPTION:
+Find the White-Blue edge and try to solve it in three moves. This one is difficult, so take your time. (Rotations are not counted as moves).
+EXPECTED FINAL STATE:
+cross
+HINT:
+The White-Orange edge is not oriented correctly (it does not have White on top), so fix its orientation.
+You can move the White-Orange edge into the middle layer and then insert it.
+OPTIMAL SOLUTION:
+F' R F
+EXPLANATION:
+By performing F', you can then insert the White-Blue edge by performing R. When you perform F', you unsolve the White-Red edge, but we can just resolve it by undoing F', i.e. by performing F. 
+*

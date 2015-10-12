@@ -1,0 +1,152 @@
+Introduction -------------------------------------------------------------
+SCRAMBLE:
+z2 R U R' U' R' F R2 U' R' U' R U R' F'
+DESCRIPTION:
+In this tutorial you will learn how to solve the orientation of the last layer of the Rubik's cube. 'Solving the orientation' means making the entire top face yellow. For example, look at the cube on the screen; it is not solved, but the entire top face is yellow - the orientation of the last layer has been solved. Solving the orientation of the last layer (or OLL) involves two steps: solving the edge orientation, and then the corner orientation.
+*
+How to recognise the no-edges-oriented orientation case. ENABLE---------------------------------
+SCRAMBLE:
+z2 F2 D2 L B2 L B2 L2 D2 B2 F2 L' B' L2 U2 L' B' R' U
+DESCRIPTION:
+There are three edge orientation cases that you need to be able to recognise.
+The first is where none of the edges are oriented. This is easy to recognise, because none of the edges will be showing yellow. An example of this is shown on the cube on the screen. 
+
+To solve this case, you use the algorithm:
+	M U R U R' U' M2 U R U' Rw'
+
+Try solving this problem using the moves provided.
+EXPECTED FINAL STATE:
+cross
+corners
+edges
+edge orientation
+HINT:
+Perform M U R U R' U' M2 U R U' Rw' - ('x j i j k f x x j i f m' on your keyboard)
+OPTIMAL SOLUTION:
+M U R U R' U' M2 U R U' Rw'
+EXPLANATION:
+N/A
+*
+How to solve the opposite-edges-oriented orientation case.  ENABLE----------------------
+SCRAMBLE:
+z2 U2 F R B' R F D2 B' D2 L2 U' F2 U B2 U' R2 B2 D' B2 U
+DESCRIPTION:
+The second edge orientation case is where two opposite edges are oriented. An example of this is shown on the cube on the screen.
+
+You solve this case by:
+	1. Adjusting the top layer so that the yellow bar flows from left to right (as shown)
+	2. Performing the moves F R U R' U' F'
+	
+Trying solving this problem using the moves provided.
+EXPECTED FINAL STATE:
+cross
+corners
+edges
+edge orientation
+HINT:
+Perform F R U R' U' F' - ('h i j k f g' on your keyboard)
+OPTIMAL SOLUTION:
+F R U R' U' F'
+EXPLANATION:
+N/A
+*
+How to solve the adjacent-oriented case. ENABLE--------------------------------
+SCRAMBLE:
+z2 L2 B2 R' B R2 B' R F2 B2 U L2 U' L2 U' L2 F2 L2 U2
+DESCRIPTION:
+The final edge orientation case is where there are two adjacent edges that are oriented. An example of this is shown on the cube on the screen.
+
+You solve this case by:
+	1. Adjusting the top layer so that one of the oriented edges is at the back and the other is at the left (as shown)
+	2. Performing the moves F U R U' R' F'
+	
+Trying solving this problem using the moves provided.
+EXPECTED FINAL STATE:
+cross
+corners
+edges
+edge orientation
+HINT:
+Perform F U R U' R' F' - ('h j i f k g' on your keyboard)
+OPTIMAL SOLUTION:
+F U R U' R' F'
+EXPLANATION:
+N/A
+*
+How to solve the corner orientation. ENABLE--------------------------------
+SCRAMBLE:
+z2 B2 U L2 D' R2 D F2 D2 F D2 R2 F' R2 F L2 U2 B
+DESCRIPTION:
+Corner Orientation:
+There are two algorithms that you need to learn in order to solve the corner orientation:
+	1. Clockwise - [D' R' D R] x 2
+	2. Anticlockwise - [R' D' R D] x 2
+	
+You start by adjusting the top face until there is an unoriented corner at the top-front-right position (as shown). If the corner needs to be twisted clockwise, then perform algorithm 1, if anticlockwise, then perform algorithm 2. After orienting that corner, adjust the top face until another unoriented corner is in the top-front-right position. Note: Do not rotate when solving corner orientation; only adjust the top face.
+
+To solve the case shown:
+	1. There is already an unoriented corner (the orange-yellow-blue corner) in the top-front-right position, so we do not need to adjust the top face yet.
+	2. We need to twist this corner so that yellow is on top, which means it needs to be twisted anticlockwise (since yellow is on the right), so perform algorithm 2.
+	3. Now we need to move another unoriented corner into the top-front-right position. We can do this by performing U' to get the orange-green-yellow corner into this position.
+	4. After moving the orange-green-yellow corner, we see that it needs to be twisted clockwise, so perform algorithm 1.
+	
+	The moves required to solve OLL in this situation are ([R' D' R D]x2 U' [D' R' D R]x2)
+	
+Try solving this problem using the moves provided.
+EXPECTED FINAL STATE:
+cross
+corners
+edges
+oll
+HINT:
+Perform [R' D' R D]x2 U' [D' R' D R]x2 ('k l i s k l i s f l k s i l k s i' on your keyboard)
+OPTIMAL SOLUTION:
+R' D' R D R' D' R D U' D' R' D R D' R' D R
+EXPLANATION:
+N/A
+*
+Corner Orientation Exercise. ENABLE--------------------------------
+SCRAMBLE:
+z2 R U2 R2 U' R2 U' R2 U2 R
+DESCRIPTION:
+Try solving this case on your own.
+EXPECTED FINAL STATE:
+cross
+corners
+edges
+oll
+HINT:
+You need to twist all corners, so you will need to perform 4 algorithms.
+Clockwise - [D' R' D R] x 2, Anticlockwise - [R' D' R D] x 2
+OPTIMAL SOLUTION:
+D' R' D R D' R' D R U R' D' R D R' D' R D U R' D' R D R' D' R D U D' R' D R D' R' D R
+EXPLANATION:
+The first corner needs to be twisted clockwise (since yellow is on front), then after performing U, the corner needs to be twisted anticlockwise (since yellow is on right) etc.
+*
+Full Orientation Exercise. ENABLE--------------------------------
+SCRAMBLE:
+z2 L2 B2 L B2 L U2 L' U2 R B' R' U' B U L U'
+DESCRIPTION:
+Try solving the entire orientation of the last layer on your own.
+EXPECTED FINAL STATE:
+cross
+corners
+edges
+oll
+HINT:
+There are two adjacent edges solved, so you need to get one of them at the back and the other at the left and then solve.
+After solving edge orientation, there is already a corner in the top-front-right position, so you don't have to adjust the top face yet.
+The orange-yellow-blue corner needs to be twisted anticlockwise, so perform [R' D' R D] x 2
+OPTIMAL SOLUTION:
+U2 F U R U' R' F' R' D' R D R' D' R D U2 D' R' D R D' R' D R
+EXPLANATION:
+To solve the edge orientation, perform U2 to setup the edges, then perform F U R U' R' F' to solve the edge orientation.
+To twist the first corner, you perform the algorithm to twist it anticlockwise (R' D' R D R' D' R D).
+To solve the second corner, you move it into the top-front-right position by performing U2 then twisting it clockwise by performing (D' R' D R D' R' D R)
+*
+CONCLUSION -------------------------------------------------------------
+SCRAMBLE:
+N
+DESCRIPTION:
+Congratulations! You now know how to solve OLL step of the Rubik's cube.
+*

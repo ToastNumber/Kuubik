@@ -1,0 +1,201 @@
+Introduction -------------------------------------------------------------
+SCRAMBLE:
+N
+DESCRIPTION:
+In this tutorial, you will learn how to solve the first-layer corners of the Rubik's cube. A corner is any cubie that has three stickers. A first-layer corner is any corner that includes a white sticker. For example, the White-Red-Green cubie is a corner since it has three stickers, and is also a first-layer corner since it has a white sticker. The Yellow-Blue-Orange cubie is also a corner since it has three stickers, but it is not a first-layer corner since it doesn't have a white sticker.
+
+You start solving the first-layer corners after you solve the cross. When solving the corners, you hold the white centre on the bottom. To solve a corner, you first need to bring it 'above' its destination. For example, if you are solving the White-Blue-Red corner, its destination is between the White, Blue, and Red centres, so to bring the corner 'above' its destination means bringing the corner between the Yellow, Blue, and Red centres. This will make more sense as you move further through the lesson.
+*
+Example of R U R' case. ENABLE -------------------------------------------------------------
+SCRAMBLE:
+L2 D L U F' U2 D F2 L D F' R2 B U2 R2 F' B' U2 L2 F2 D2 L' B R2 U L2 z2 U2
+DESCRIPTION:
+There are four situations you need to recognise when solving the corners. For now, we will learn how to solve a corner if it is in the top layer and white is facing to the right.
+
+Look at the White-Green-Orange corner.
+
+Its 'destination' is between the White, Green, and Orange centres (since those are its three stickers), so we must bring the corner 'above' its destination. In this case, the corner is already above its destination. To solve a corner, we must hold the cube so that the corner is at the Top-Front-Right position, which is where the corner is in this case. The white sticker is facing to the right, so now we can learn an algorithm to solve this piece:
+	R U R'
+If you perform these moves on the cube, the White-Green-Orange corner will be solved.
+
+Try solving the corner using the moves provided.
+EXPECTED FINAL STATE:
+cross
+w-g-o
+HINT:
+Perform R U R' - ('i j k' on your keyboard)
+OPTIMAL SOLUTION:
+R U R'
+EXPLANATION:
+We rotate the cube so that the corner is at the Top-Front-Right position, then we see that the white sticker is on the right, so we perform the algorithm (R U R').
+*
+Example of F' U' F case. ENABLE -------------------------------------------------------------
+SCRAMBLE:
+F' U2 D R2 F2 B' U2 R' D' R2 F2 L F2 B2 R' B2 U2 B2 R2 U' L U2 D' L' F L2 z2 B U' B' y'
+DESCRIPTION:
+The next situation you need to recognise is when the corner is in the top layer and the white stickers is facing to the front.
+
+Look at the White-Red-Green corner.
+
+Its 'destination' is between the White, Red, and Green centres, so we must bring the corner 'above' its destination. In this case, the corner is already above its destination. The white sticker is facing to the front, so now we can learn an algorithm to solve this piece:
+	F' U' F
+If you perform these moves on the cube, the White-Red-Green corner will be solved.
+
+Try solving the corner using the moves provided.
+EXPECTED FINAL STATE:
+cross
+w-r-g
+HINT:
+Perform F' U' F - ('g f h' on your keyboard)
+OPTIMAL SOLUTION:
+F' U' F
+EXPLANATION:
+We rotate the cube so that the corner is at the Top-Front-Right position, then we see that the white sticker is on the front, so we perform the algorithm (F' U' F).
+*
+Example of R U2 R' U' R U R' case. ENABLE -------------------------------------------------------------
+SCRAMBLE:
+B2 U2 L2 D2 U2 F2 L2 D' L2 D' L2 B' L B2 R' D' L D2 L R' U R U R2 z2 U2 y'
+DESCRIPTION:
+The next situation you need to recognise is when the corner is in the top layer and the white stickers is facing upwards.
+
+Look at the White-Red-Green corner.
+
+Its 'destination' is between the White, Red, and Green centres, so we must bring the corner 'above' its destination. In this case, the corner is already above its destination. The white sticker is facing to the upwards, so now we can learn an algorithm to solve this piece:
+	F' L' U2 L F
+If you perform these moves on the cube, the White-Red-Green corner will be solved.
+This algorithm is the same forwards as it is backwards - this might make it easier to remember.
+
+Try solving the corner using the moves provided.
+EXPECTED FINAL STATE:
+cross
+w-r-g
+HINT:
+Perform F' L' U2 L F - ('g e j j d h' on your keyboard)
+OPTIMAL SOLUTION:
+F' L' U2 L F
+EXPLANATION:
+We rotate the cube so that the corner is at the Top-Front-Right position, then we see that the white sticker is facing upwards, so we perform the algorithm (F' L' U2 L F).
+*
+Example of corner in bottom layer. ENABLE -------------------------------------------------------------
+SCRAMBLE:
+D2 B U2 F' U2 L2 F2 D2 F D2 U2 L' D U' R' B' F U2 F' L' D2 U L' F' R' F' R2 U z2 L U L' y'
+DESCRIPTION:
+The final situation you need to recognise is when there are no corners in the top layer.
+
+The obvious solution here is to get one of the corners into the top layer, then solve it normally by recognising one of the three previous cases.
+
+Look at the White-Orange-Blue corner.
+It is trapped in the bottom layer. We can liberate corners from the bottom layer by rotating the cube so that the corner is at the Bottom-Front-Right position (you don't need to rotate in this case) and then performing the moves R U R'.
+
+Its 'destination' is between the White, Orange, and Blue centres, so we must bring the corner 'above' its destination by performing (U). The white sticker is facing to the right, so we can perform the moves R U R'.
+
+Try solving the White-Orange-Blue corner using the moves (R U R' U y2 R U R')
+EXPECTED FINAL STATE:
+cross
+w-o-b
+HINT:
+Perform R U R' U y2 R U R' - ('i j k j ; ; i j k' on your keyboard)
+OPTIMAL SOLUTION:
+R U R' U y2 R U R'
+EXPLANATION:
+Liberate the corner from the bottom layer, move it above its destination, then solve it using the first algorithm. In fact, there is a better solution to this case, but there is no need to learn it - R B' U2 B R'
+*
+Summary -------------------------------------------------------------
+SCRAMBLE:
+N
+DESCRIPTION:
+Summary:
+Always hold the corner at the Top-Front-Right position.
+If there are no corners in the top layer, then hold the corner in the Bottom-Front-Right position.
+
+1. Corner in top layer	-	white sticker facing right	-	R U R'
+2. Corner in top layer	-	white sticker facing front	-	F' U' F
+3. Corner in top layer	-	white sticker facing upward	-	F' L' U2 L F
+4. Corner in bottom layer	-	white sticker anywhere	-	R U R'
+*
+Challenge 1. ENABLE -------------------------------------------------------------
+SCRAMBLE:
+B2 L U2 L D2 L R2 B2 D2 B2 U' L' R U' F L' B' D2 U2 R' F' L' U D' R F' R2 U' z2 y' U'
+DESCRIPTION:
+CHALLENGE 1
+
+Try solving the White-Red-Green corner in 5 moves.
+EXPECTED FINAL STATE:
+cross
+w-r-g
+HINT:
+The white sticker is facing upwards, so you can perform algorithm 3 to solve it.
+OPTIMAL SOLUTION:
+F' L' U2 L F
+EXPLANATION:
+This is one of the cases you need to be able to recognise. The white sticker is facing upwards, so you can perform F' L' U2 L F to solve it.
+*
+Challenge 2. ENABLE -------------------------------------------------------------
+SCRAMBLE:
+R D2 F' D R2 U R' L' B D L2 B' D2 B2 R2 L2 B L2 F' R2 L2 B' R' B' D L2 U' z2 U2
+DESCRIPTION:
+CHALLENGE 2
+
+Try solving the White-Blue-Red corner in 4 moves or fewer.
+EXPECTED FINAL STATE:
+cross
+w-b-r
+HINT:
+You need to move the corner over its destination first (its destination is between the White, Blue, and Red centres). Then rotate the cube so that the corner is at the Top-Front-Right position.
+White is right, so perform algorithm 1 (R U R').
+OPTIMAL SOLUTION:
+U y2 R U R'
+U L U L'
+EXPLANATION:
+You perform U to get the corner above its destination. Then rotate the cube (y2) in order to get the cube at the Top-Front-Right position. Now you can recognise that you need to apply algorithm 1 (R U R') since white is facing right.
+In fact, there is a 3 move solution - (B' U B) - but this is difficult so see, and is not required for the beginner method.
+*
+Challenge 3. ENABLE -------------------------------------------------------------
+SCRAMBLE:
+F2 D2 L2 D2 R' B2 F2 L2 U2 R' D2 B' D R B R2 D2 U2 R2 U L' U R U B L2 U2 z2 F' U F
+DESCRIPTION:
+CHALLENGE 3
+
+Try solving the White-Green-Orange corner in 4 moves or fewer.
+EXPECTED FINAL STATE:
+cross
+w-g-o
+HINT:
+You need to move the corner over its destination first (its destination is between the White, Green, and Orange centres).
+White is facing front, so perform algorithm 1 (F' U' F).
+OPTIMAL SOLUTION:
+U2 F' U' F
+EXPLANATION:
+You perform U2 to get the corner above its destination. Now you can recognise that you need to apply algorithm 2 (F U' F) since white is facing right.
+In fact, there is a 3 move solution - (R U2 R') - but this is difficult so see, and is not required for the beginner method.
+*
+Challenge 4. ENABLE -------------------------------------------------------------
+SCRAMBLE:
+L2 B2 U F2 D U F2 D' B2 U' B2 L B' U' F L2 R2 F' R' D2 U2 B' L' U' B U2 z2 R U2 R'
+DESCRIPTION:
+CHALLENGE 4
+
+Try solving the White-Orange-Blue corner in 6 moves or fewer.
+EXPECTED FINAL STATE:
+cross
+w-o-b
+HINT:
+The corner is trapped in the bottom layer, so you need to get it into the top layer first.
+Rotate (y2) so that the corner is at the Bottom-Front-Right position.
+Perform R U R' to liberate the corner from the bottom layer.
+Once the corner is in the top layer, move the corner over its destination.
+Make sure the cube is rotated so the corner is in the Top-Front-Right position.
+Once the corner is over its destination, you can see that white is facing front, so perform algorithm 2 (F' U' F).
+OPTIMAL SOLUTION:
+y2 R U R' y' F' U' F
+L U L' R' U' R
+EXPLANATION:
+You rotate the cube (y2) so that the corner is at the Bottom-Front-Right position, then perform (R U R') to get the corner into the top layer. Then perform (U) to get the corner above its destination. Then rotate (y') so that the corner is at the Top-Front-Right position. Then, since white is facing front, perform algorithm 2 (F' U' F) to solve the corner.
+*
+End -------------------------------------------------------------
+SCRAMBLE:
+N
+DESCRIPTION:
+Summary:
+Congratulations! You have completed this tutorial. The next step in solving the Rubik's cube is solving the middle-layer edges.
+*

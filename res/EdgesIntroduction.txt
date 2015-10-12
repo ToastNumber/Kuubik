@@ -1,0 +1,97 @@
+Introduction -------------------------------------------------------------
+SCRAMBLE:
+N
+DESCRIPTION:
+In this tutorial, you will learn how to solve the middle-layer edges of the Rubik's cube. Middle-layer edges are pieces with two stickers that do not contain the colours white or yellow. An example of a middle-layer edge is the green-red edge. You solve edges after you solve the first-layer corners. While solving edges, you hold the white face on the bottom. To solve an edge, you bring the edge 'above' its destination, then you insert it using the appropriate algorithm.
+*
+Example of U R U' R' U' F' U F case. ENABLE-------------------------------------------------
+SCRAMBLE:
+U2 B2 F2 R2 U2 R2 D' F2 D U2 L2 R F2 R' D F' L' F2 L2 B' U2 B R L U B' z2 R U R' U L U L' R U' R' B U B' U L' U' L U2
+DESCRIPTION:
+The process of solving edges is as follows:
+Find a middle-layer edge (an edge without a yellow sticker) in the top-layer. Perform U until the front sticker of the edge matches with its corresponding centre and rotate the cube so that both of them are facing you, then perform the appropriate algorithm.
+
+Look at the orange-green edge. The green sticker of the orange-green edge is matched-up with the green centre so no setup is required. Which algorithm do we use? Well, the edge needs to go to the RIGHT since the orange centre is to the right, so we use the algorithm:
+
+U R U' R' U' F' U F
+
+Try performing these moves to solve the orange-green edge.
+EXPECTED FINAL STATE:
+cross
+corners
+o-g
+HINT:
+Perform U R U' R' U' F' U F (j i f k f g j h on your keyboard)
+OPTIMAL SOLUTION:
+U R U' R' U' F' U F
+EXPLANATION:
+We need to move the edge to the right (since the orange-green edge's destination is to the right), so we perform the corresponding algorithm.
+*
+Example of U' L' U L U F U' F' case. ENABLE-----------------------------------------------------
+SCRAMBLE:
+z2 F2 U L2 B2 R2 F2 U F2 D' F2 U' F R' F R D2 B2 L2 R U R' U' R U R' U' R U R' U' y
+DESCRIPTION:
+Look at the orange-green edge. The orange sticker of the orange-green edge is matched-up with the orange centre so no setup is required. Which algorithm do we use? Well, the edge needs to go to the LEFT since the green centre is to the right, so we use the algorithm:
+
+U' L' U L U F U' F'
+
+Try performing these moves to solve the orange-green edge.
+EXPECTED FINAL STATE:
+cross
+corners
+o-g
+HINT:
+Perform U' L' U L U F U' F' (f e j d j h f g on your keyboard)
+OPTIMAL SOLUTION:
+U' L' U L U F U' F'
+EXPLANATION:
+We need to move the edge to the left (since the orange-green edge's destination is to the left), so we perform the corresponding algorithm.
+*
+Example LEFT problem case. ENABLE-----------------------------------------------------
+SCRAMBLE:
+y2 z2 D2 U2 R' U2 R B2 U2 R D2 F2 U' R B U2 B' L U R' U' R U R' U' R U R' U'
+DESCRIPTION:
+Try solving the blue-red orange on your own. 
+EXPECTED FINAL STATE:
+cross
+corners
+b-r
+HINT:
+Remember, you need to set up the edge first so that the front sticker of the edge matches the corresponding centre.
+Perform U to setup the edge, then rotate y so that it is facing you.
+The edge needs to go to the left (since the blue centre is to the left).
+Once setup, perform the moves U' L' U L U F U' F'
+OPTIMAL SOLUTION:
+U y U' L' U L U F U' F'
+EXPLANATION:
+We need to move the edge to the left (since the orange-green edge's destination is to the left), so we perform the corresponding algorithm.
+*
+Example Trapped ENABLE-----------------------------------------------------
+SCRAMBLE:
+y z2 R U2 F2 L2 B2 L' D2 L B2 L2 R2 B' R B R2 F2 R' F' U F U' F' U' F
+DESCRIPTION:
+You will recall that in order to solve a middle-layer edge, we must find a middle-layer edge in the top layer then perform the appropriate setup moves. But if you look at the cube, you will see that the green-red edge is not solved, but yet there are no other middle-layer edges in the top layer. How do we solve this piece? We need to get this piece into the top layer so that we can solve it using our previous knowledge. To do this, we can insert a random top-layer edge into this position, and, in effect, this will swap the two edges.
+
+So, to get the green-red edge into the top layer, perform the first algorithm we learned for edges: U R U' R' U' F' U F
+
+Now the edge is in the top layer and we can solve it from here. 
+
+Try getting the green-red edge into the top layer (you don't have to solve the piece, just get it into the top layer)
+EXPECTED FINAL STATE:
+cross
+corners
+g-r
+HINT:
+Remove the edge by performing U R U' R' U' F' U F (j i f k f g j h on your keyboard)
+OPTIMAL SOLUTION:
+U R U' R' U' F' U F
+EXPLANATION:
+By performing U R U' R' U' F' U F, we are swapping an edge in the top layer with the green-red edge, thus removing the green-red edge from the middle layer.
+*
+End -------------------------------------------------------------
+SCRAMBLE:
+N
+DESCRIPTION:
+Summary:
+Congratulations! You have completed this tutorial. The next step in solving the Rubik's cube is solving the orientation of the last layer.
+*

@@ -1,0 +1,33 @@
+Key mappings. ENABLE -------------------------------------------------------------
+SCRAMBLE:
+N
+DESCRIPTION:
+Spacebar starts the timer.
+
+Try performing these moves on the cube so that you can understand how to control it.
+Move	Key
+U	j
+U'	f
+D	s
+D'	l
+R	i
+R'	k
+L	d
+L'	e
+F	h
+F'	g
+B	w
+B'	o
+Rw	u
+Rw'	m
+Lw	v
+Lw'	r
+M	x
+M'	.
+x	y
+x'	n
+y	;
+y'	a
+z	p
+z'	q
+*

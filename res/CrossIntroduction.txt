@@ -1,0 +1,51 @@
+Introduction.
+SCRAMBLE:
+B L2 B2 D2 F L2 F2 U2 B R2 F2 L B2 R2 D' L2 B2 F D' L' U' D F R F2 U R U R
+DESCRIPTION:
+Welcome to the cross tutorial. 
+The method you will be learning is a beginners' variation of the CFOP (Cross-F2L-OLL-PLL) method.
+The first step in this beginners' method is the 'Cross'. In the simulation window, you can see example of a cross on the white face.
+A cross consists of four solved edges with a common colour. In this example, the white cross has been solved since the White-Green, White-Red, White-Blue, and White-Orange edges are all solved. 
+You can solve the cross on any face (White, Yellow, Red, Orange, Green, or Blue), but the most popular colour is white, so we will stick with this colour.
+The basic method for solving a single cross piece is:
+1. Move the edge so that one sticker is touching the matching centre (e.g. the Red sticker of the White-Red edge is touching the Red centre).
+2. Perform the appropriate move in order to make the other sticker (White) touch the (White) centre without affecting step 1.
+*
+Demonstration of solving one piece. ENABLE user to perform moves
+SCRAMBLE:
+B L2 B2 D2 F L2 F2 U2 B R2 F2 L B2 R2 D' L2 B2 F D' L' U' y
+DESCRIPTION:
+Let's look at an example of solving a piece of the cross.
+Look at the White-Red edge, if we perform the move F', we will solve the edge.
+Try performing the move F' ('g' on your keyboard) to solve the White-Red edge.
+EXPECTED FINAL STATE:
+w-r
+HINT:
+Perform F'
+OPTIMAL SOLUTION:
+F'
+EXPLANATION:
+The White-Red edge needs to go between the 'White' and 'Red' centres. We can see the Red sticker of the White-Red edge is adjacent to the Red centre, so all we need to do is match up the White sticker with the White centre by performing F'.
+*
+Another example of solving a cross piece. ENABLE
+SCRAMBLE:
+U2 L2 U2 B' R2 U2 B2 R2 F2 R2 F R' B' U F2 D R2 F2 U2 R U' L2 D B
+DESCRIPTION:
+Here, the White-Red edge is at the Down-Front position. We can solve it using D R2.
+Try performing the moves D R2 ('s i i' on your keyboard) to solve the White-Red edge.
+EXPECTED FINAL STATE:
+w-r
+HINT:
+Perform D R2
+OPTIMAL SOLUTION:
+D R2
+F2 U'
+EXPLANATION:
+Performing D lines up the Red sticker of the edge with the Red centre. Then all we need to do is perform R2 to line up the White edge as well.
+*
+End of Tutorial. DISABLE
+SCRAMBLE:
+B L2 B2 D2 F L2 F2 U2 B R2 F2 L B2 R2 D' L2 B2 F D' L' U' D F R F2 U R U R
+DESCRIPTION:
+Congratulations! You have reached the end of the beginner cross tutorial. Hopefully you now have a better understanding of how to get started when solving a Rubik's cube.
+*
